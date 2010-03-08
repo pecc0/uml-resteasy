@@ -23,8 +23,10 @@
 			<include name="com/musicShop/data/xml/EmployeeListing.java"/>
 			<include name="com/musicShop/frontEnd/SuppliersWebService.java"/>
 			<include name="com/musicShop/frontEnd/SupplierssBean.java"/>
+			<include name="com/musicShop/frontEnd/LoginBean.java"/>
 			<include name="com/musicShop/frontEnd/EmployeesWebService.java"/>
 			<include name="com/musicShop/frontEnd/EmployeesBean.java"/>
+			<include name="com/musicShop/forms/LoginForm.java"/>
 			<include name="com/musicShop/interceptors/ManagerControl.java"/>
 			<include name="com/musicShop/interceptors/UserControl.java"/>
 		</javac>
