@@ -3,9 +3,11 @@ package com.musicShop.data.entities;
 import java.util.ArrayList;
 import com.musicShop.data.entities.Song;
 
+@javax.xml.bind.annotation.XmlRootElement
 public class Album {
-	public String style;
-	public int[] year;
+	private String style = "";
+	private int[] year;
+	private String name = "";
 	public ArrayList<Song> songs = new ArrayList<Song>();
 
 	public void setStyle(String aStyle) {
@@ -22,5 +24,13 @@ public class Album {
 
 	public int[] getYear() {
 		return this.year;
+	}
+
+	public void setName(String aName) {
+		this.name = aName;
+	}
+
+	public String getName() {
+		return this.name;
 	}
 }

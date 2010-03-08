@@ -9,7 +9,7 @@ import java.util.List;
 public class EmployeeListing {
 	@javax.xml.bind.annotation.XmlElement
 	public java.util.ArrayList<com.musicShop.data.xml.TableColumn> aoColumns = TableColumn.columnsFromClass(Employee.class);;
-	private Employee[] list;
+	Employee[] list;
 
 	@javax.xml.bind.annotation.XmlElement(name = "aaData")
 	public java.util.List<Employee> getEmplyees() {

@@ -9,7 +9,7 @@ import java.util.List;
 public class SuppliersListing {
 	@javax.xml.bind.annotation.XmlElement
 	public java.util.ArrayList<com.musicShop.data.xml.TableColumn> aoColumns = TableColumn.columnsFromClass(Supplier.class);;
-	private Supplier[] list;
+	Supplier[] list;
 
 	@javax.xml.bind.annotation.XmlElement(name = "aaData")
 	public java.util.List<Supplier> getSuppliers() {

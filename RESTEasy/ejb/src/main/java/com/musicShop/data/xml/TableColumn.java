@@ -8,6 +8,7 @@ public class TableColumn {
 	public String sTitle = "";
 	@javax.xml.bind.annotation.XmlElement
 	public String sClass = "";
+	AlbumListing unnamed_AlbumListing_;
 
 	public static ArrayList columnsFromClass(java.lang.Class aClazz) {
 				ArrayList<TableColumn> result = new ArrayList<TableColumn>();
