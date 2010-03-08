@@ -1,7 +1,7 @@
 package com.musicShop.data.entities;
 
 public class Musition {
-	public String name;
+	private String name;
 	public Group group;
 
 	public void setName(String aName) {

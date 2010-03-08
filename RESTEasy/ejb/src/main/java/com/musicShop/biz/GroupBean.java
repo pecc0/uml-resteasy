@@ -7,9 +7,7 @@ import com.musicShop.frontEnd.GroupService;
 @javax.interceptor.Interceptors(value = {com.musicShop.interceptors.UserControl.class})
 public class GroupBean implements GroupService {
 
-	@javax.ws.rs.POST
-	@javax.ws.rs.Path(value = "add")
 	public void addGroup(GroupForm aGroup) {
-		throw new UnsupportedOperationException();
+		System.out.print("Sotore the login somewhere " + aGroup);
 	}
 }

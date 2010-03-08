@@ -15,9 +15,7 @@ public class StockBean implements StockService {
 		return e;
 	}
 
-	@javax.ws.rs.POST
-	@javax.ws.rs.Path(value = "add")
 	public void addStock(StockForm aAlbum) {
-		throw new UnsupportedOperationException();
+		System.out.print("Store the album " + aAlbum);
 	}
 }

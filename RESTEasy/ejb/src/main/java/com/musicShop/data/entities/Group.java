@@ -5,10 +5,10 @@ import com.musicShop.data.entities.Musition;
 import com.musicShop.data.entities.Song;
 
 public class Group {
-	public String name;
-	public int[] from_date;
-	public int[] to_date;
-	public String musition;
+	private String name;
+	private int[] from_date;
+	private int[] to_date;
+	private String musition;
 	public ArrayList<Musition> musitians = new ArrayList<Musition>();
 	public ArrayList<Song> songs = new ArrayList<Song>();
 

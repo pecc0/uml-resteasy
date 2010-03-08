@@ -1,8 +1,8 @@
 package com.musicShop.data.entities;
 
 public class Song {
-	public String name;
-	public float[] duration;
+	private String name;
+	private float[] duration;
 	public Album album;
 	public Group group;
 

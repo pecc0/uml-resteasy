@@ -1,9 +1,16 @@
 package com.musicShop.forms;
 
 public class StockForm {
+	@javax.ws.rs.FormParam(value = "name")
 	private String albumName;
+	@javax.ws.rs.FormParam(value = "style")
 	private String style;
+	@javax.ws.rs.FormParam(value = "year")
 	private String year;
+
+	public String toString() {
+		return "\nname: " + albumName + "\nstyle: " + style;
+	}
 
 	public void setAlbumName(String aAlbumName) {
 		this.albumName = aAlbumName;
