@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>org.jboss.resteasy</groupId>
-        <artifactId>ejb-integration-example</artifactId>
+        <artifactId>music-shop-prj</artifactId>
         <version>2.0-beta-1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -31,13 +31,13 @@
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
-            <artifactId>ejb-integration</artifactId>
+            <artifactId>music-shop-ejb</artifactId>
             <version>${project.version}</version>
             <type>ejb</type>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
-            <artifactId>ejb-integration-war</artifactId>
+            <artifactId>music-shop-war</artifactId>
             <version>${project.version}</version>
             <type>war</type>
         </dependency>
@@ -54,7 +54,7 @@
                 <artifactId>maven-ear-plugin</artifactId>
                 <configuration>
                     <defaultJavaBundleDir>lib/</defaultJavaBundleDir>
-                    <finalName>ejb-integration</finalName>
+                    <finalName>music-shop</finalName>
                 </configuration>
                 <executions>
                     <execution>
@@ -82,7 +82,7 @@
                             <goal>deploy</goal>
                         </goals>
                         <configuration>
-                            <fileName>${basedir}/target/ejb-integration.ear</fileName>
+                            <fileName>${basedir}/target/music-shop.ear</fileName>
                         </configuration>
                     </execution>
                     <execution>
@@ -92,7 +92,7 @@
                             <goal>undeploy</goal>
                         </goals>
                         <configuration>
-                            <fileName>${basedir}/target/ejb-integration.ear</fileName>
+                            <fileName>${basedir}/target/music-shop.ear</fileName>
                         </configuration>
                     </execution>
                 </executions>

@@ -4,7 +4,7 @@
 
     <groupId>org.jboss.resteasy</groupId>
     <version>2.0-beta-1</version>
-    <artifactId>ejb-integration-example</artifactId>
+    <artifactId>music-shop-prj</artifactId>
     <packaging>pom</packaging>
     <properties>
         <jbossHome>/Users/billburke/jboss/jboss-4.2.2.GA</jbossHome>
