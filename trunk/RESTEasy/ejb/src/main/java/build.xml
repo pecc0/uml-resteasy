@@ -12,21 +12,31 @@
 	<target depends="init" name="build">
 		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
 			<classpath refid="build.classpath"/>
-			<include name="com/musicShop/data/entities/Supplier.java"/>
-			<include name="com/musicShop/data/entities/Employee.java"/>
 			<include name="com/musicShop/data/entities/Musition.java"/>
 			<include name="com/musicShop/data/entities/Group.java"/>
 			<include name="com/musicShop/data/entities/Song.java"/>
 			<include name="com/musicShop/data/entities/Album.java"/>
-			<include name="com/musicShop/data/xml/TableColumn.java"/>
+			<include name="com/musicShop/data/entities/Supplier.java"/>
+			<include name="com/musicShop/data/entities/Employee.java"/>
 			<include name="com/musicShop/data/xml/SuppliersListing.java"/>
+			<include name="com/musicShop/data/xml/TableColumn.java"/>
+			<include name="com/musicShop/data/xml/AlbumListing.java"/>
 			<include name="com/musicShop/data/xml/EmployeeListing.java"/>
 			<include name="com/musicShop/frontEnd/SuppliersWebService.java"/>
-			<include name="com/musicShop/frontEnd/SupplierssBean.java"/>
-			<include name="com/musicShop/frontEnd/LoginBean.java"/>
+			<include name="com/musicShop/frontEnd/LoginService.java"/>
+			<include name="com/musicShop/frontEnd/EmployeesBean2.java"/>
+			<include name="com/musicShop/frontEnd/StockService.java"/>
+			<include name="com/musicShop/frontEnd/GroupService.java"/>
 			<include name="com/musicShop/frontEnd/EmployeesWebService.java"/>
-			<include name="com/musicShop/frontEnd/EmployeesBean.java"/>
+			<include name="com/musicShop/forms/StockForm.java"/>
+			<include name="com/musicShop/forms/GroupForm.java"/>
 			<include name="com/musicShop/forms/LoginForm.java"/>
+			<include name="com/musicShop/biz/LoginBean.java"/>
+			<include name="com/musicShop/biz/SupplierssBean.java"/>
+			<include name="com/musicShop/biz/StockBean.java"/>
+			<include name="com/musicShop/biz/SupplierssBean2.java"/>
+			<include name="com/musicShop/biz/GroupBean.java"/>
+			<include name="com/musicShop/biz/EmployeesBean.java"/>
 			<include name="com/musicShop/interceptors/ManagerControl.java"/>
 			<include name="com/musicShop/interceptors/UserControl.java"/>
 		</javac>

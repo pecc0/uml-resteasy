@@ -1,6 +1,7 @@
-package com.musicShop.frontEnd;
+package com.musicShop.biz;
 
 import com.musicShop.forms.LoginForm;
+import com.musicShop.frontEnd.LoginService;
 
 @javax.ejb.Stateless
 @javax.interceptor.Interceptors(value = {com.musicShop.interceptors.UserControl.class})

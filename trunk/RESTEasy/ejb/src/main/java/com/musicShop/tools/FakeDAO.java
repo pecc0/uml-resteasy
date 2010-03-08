@@ -2,6 +2,7 @@ package com.musicShop.tools;
 
 import java.util.ArrayList;
 
+import com.musicShop.data.entities.Album;
 import com.musicShop.data.entities.Employee;
 import com.musicShop.data.entities.Supplier;
 
@@ -33,4 +34,16 @@ public class FakeDAO {
 		return result.toArray(new Supplier[]{});
 	}
 
+	public static Album[] getAllAlbums() {
+		ArrayList<Album> result = new ArrayList<Album>();
+		Album e = new Album();
+		e.setStyle("hard rock");
+		//e.setOwnerName("owner");
+		result.add(e);
+		e = new Album();
+		//e.setFirmName("sup 2");
+		//e.setOwnerName("2's owner");
+		result.add(e);
+		return result.toArray(new Album[]{});
+	}
 }
