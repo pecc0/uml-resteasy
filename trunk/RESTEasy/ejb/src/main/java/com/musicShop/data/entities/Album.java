@@ -6,7 +6,7 @@ import com.musicShop.data.entities.Song;
 @javax.xml.bind.annotation.XmlRootElement
 public class Album {
 	private String style = "";
-	private int[] year;
+	private int year;
 	private String name = "";
 	public ArrayList<Song> songs = new ArrayList<Song>();
 
@@ -18,11 +18,11 @@ public class Album {
 		return this.style;
 	}
 
-	public void setYear(int[] aYear) {
+	public void setYear(int aYear) {
 		this.year = aYear;
 	}
 
-	public int[] getYear() {
+	public int getYear() {
 		return this.year;
 	}
 

@@ -9,7 +9,11 @@ function fillTable(table, serviceUrl) {
 			$.each(inputdata, function(index, value) {
 				var row = new Array();
 				$.each(json.aoColumns, function(index, col) {
-					row.push(value[col.sTitle]);
+					if (value[col.sTitle] != null) {
+						row.push(value[col.sTitle]);
+					} else {
+						row.push("none");
+					}
 				});
 				aDataSet.push(row);
 			});

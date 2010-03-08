@@ -1,5 +1,7 @@
 package com.musicShop.frontEnd;
 
+import org.jboss.resteasy.annotations.Form;
+
 import com.musicShop.data.xml.AlbumListing;
 import com.musicShop.forms.StockForm;
 
@@ -13,5 +15,5 @@ public interface StockService {
 
 	@javax.ws.rs.POST
 	@javax.ws.rs.Path(value = "add")
-	public void addStock(StockForm aAlbum);
+	public void addStock(@Form StockForm aAlbum);
 }
