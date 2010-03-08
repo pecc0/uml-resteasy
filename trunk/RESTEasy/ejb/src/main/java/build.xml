@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="com/musicShop/data/entities/Employee.java"/>
+			<include name="com/musicShop/data/entities/Musition.java"/>
+			<include name="com/musicShop/data/entities/Group.java"/>
+			<include name="com/musicShop/data/entities/Song.java"/>
+			<include name="com/musicShop/data/entities/Album.java"/>
+			<include name="com/musicShop/data/entities/Supplier.java"/>
+			<include name="com/musicShop/data/xml/TableColumn.java"/>
+			<include name="com/musicShop/data/xml/EmployeeListing.java"/>
+			<include name="com/musicShop/frontEnd/EmployeesWebService.java"/>
+			<include name="com/musicShop/frontEnd/EmployeesBean.java"/>
+		</javac>
+	</target>
+</project>

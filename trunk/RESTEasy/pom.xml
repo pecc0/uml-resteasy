@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project>
+    <name>Resteasy JAX-RS EJB Test</name>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.jboss.resteasy.examples</groupId>
-    <artifactId>jaxb-json</artifactId>
+
+    <groupId>org.jboss.resteasy</groupId>
     <version>2.0-beta-1</version>
-    <packaging>war</packaging>
-    <name/>
-    <description/>
+    <artifactId>ejb-integration-example</artifactId>
+    <packaging>pom</packaging>
+    <properties>
+        <jbossHome>/Users/billburke/jboss/jboss-4.2.2.GA</jbossHome>
+    </properties>
 
     <repositories>
         <repository>
@@ -27,68 +27,15 @@
             <name>jboss repo</name>
             <url>http://repository.jboss.org/maven2</url>
         </repository>
+        <repository>
+            <id>scannotation</id>
+            <url>http://scannotation.sf.net/maven2</url>
+        </repository>
     </repositories>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxrs</artifactId>
-            <version>2.0-beta-1</version>
-            <!-- filter out unwanted jars -->
-            <exclusions>
-                <exclusion>
-                    <groupId>commons-httpclient</groupId>
-                    <artifactId>commons-httpclient</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javax.servlet</groupId>
-                    <artifactId>servlet-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jettison-provider</artifactId>
-            <version>2.0-beta-1</version>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <finalName>jaxb-json</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
-                <version>6.1.15</version>
-                <configuration>
-                    <!-- By default the artifactId is taken, override it with something simple -->
-                    <contextPath>/</contextPath>
-                    <scanIntervalSeconds>2</scanIntervalSeconds>
-                    <connectors>
-                        <connector
-                                implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                            <port>9095</port>
-                            <maxIdleTime>60000</maxIdleTime>
-                        </connector>
-                    </connectors>
-                    <systemProperties>
-                        <systemProperty>
-                            <name>log4j.configuration</name>
-                            <value>
-                                file:./src/test/resources/log4j.properties
-                            </value>
-                        </systemProperty>
-                    </systemProperties>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>ejb</module>
+        <module>war</module>
+        <module>ear</module>
+    </modules>
 </project>
