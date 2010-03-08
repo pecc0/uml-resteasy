@@ -1,6 +1,9 @@
 package org.jboss.resteasy.examples.service;
 
 import javax.ws.rs.core.Application;
+
+import com.musicShop.frontEnd.EmployeesWebService;
+
 import java.util.Set;
 import java.util.HashSet;
 
@@ -15,6 +18,7 @@ public class LibraryApplication extends Application
    public LibraryApplication()
    {
       singletons.add(new Library());
+      singletons.add(new EmployeesWebService());
    }
 
    @Override
