@@ -22,6 +22,7 @@
 			<include name="com/musicShop/data/xml/EmployeeListing.java"/>
 			<include name="com/musicShop/frontEnd/EmployeesWebService.java"/>
 			<include name="com/musicShop/frontEnd/EmployeesBean.java"/>
+			<include name="com/musicShop/interceptors/ManagerControl.java"/>
 		</javac>
 	</target>
 </project>

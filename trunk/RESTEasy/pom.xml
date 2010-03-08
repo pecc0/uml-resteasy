@@ -7,7 +7,7 @@
     <artifactId>music-shop-prj</artifactId>
     <packaging>pom</packaging>
     <properties>
-        <jbossHome>/Users/billburke/jboss/jboss-4.2.2.GA</jbossHome>
+        <jbossHome>C\:/jbosses/jboss-4.2.3.GA_BNG</jbossHome>
     </properties>
 
     <repositories>

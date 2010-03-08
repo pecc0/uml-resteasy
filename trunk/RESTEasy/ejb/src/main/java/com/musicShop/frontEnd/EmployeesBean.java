@@ -3,6 +3,7 @@ package com.musicShop.frontEnd;
 import com.musicShop.data.xml.EmployeeListing;
 
 @javax.ejb.Stateless
+@javax.interceptor.Interceptors(value = {com.musicShop.interceptors.ManagerControl.class})
 public class EmployeesBean implements EmployeesWebService {
 	private EmployeeListing employess;
 
