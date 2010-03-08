@@ -6,7 +6,7 @@
    <display-name>Archetype Created Web Application</display-name>
    <context-param>
       <param-name>resteasy.jndi.resources</param-name>
-      <param-value>music-shop/SimpleResourceBean/local, music-shop/EmployeesBean/local</param-value>
+      <param-value>music-shop/SupplierssBean/local, music-shop/EmployeesBean/local</param-value>
    </context-param>
 
    
