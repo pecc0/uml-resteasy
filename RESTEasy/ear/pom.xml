@@ -75,6 +75,16 @@
                     <jbossHome>${jbossHome}</jbossHome>
                 </configuration>
                 <executions>
+                	<execution>
+                        <id>jboss-undeploy</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>undeploy</goal>
+                        </goals>
+                        <configuration>
+                            <fileName>${basedir}/target/music-shop.ear</fileName>
+                        </configuration>
+                    </execution>
                     <execution>
                         <id>jboss-deploy</id>
                         <phase>pre-integration-test</phase>
@@ -85,16 +95,7 @@
                             <fileName>${basedir}/target/music-shop.ear</fileName>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>jboss-undeploy</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>undeploy</goal>
-                        </goals>
-                        <configuration>
-                            <fileName>${basedir}/target/music-shop.ear</fileName>
-                        </configuration>
-                    </execution>
+                    
                 </executions>
             </plugin>
             <plugin>
