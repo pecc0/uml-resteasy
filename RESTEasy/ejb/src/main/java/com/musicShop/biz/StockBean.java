@@ -1,7 +1,7 @@
 package com.musicShop.biz;
 
 import com.musicShop.data.xml.AlbumListing;
-import com.musicShop.forms.StockForm;
+import com.musicShop.data.entities.Album;
 import com.musicShop.frontEnd.StockService;
 
 @javax.ejb.Stateless
@@ -15,7 +15,7 @@ public class StockBean implements StockService {
 		return e;
 	}
 
-	public void addStock(StockForm aAlbum) {
+	public void addStock(Album aAlbum) {
 		System.out.print("Store the album " + aAlbum);
 	}
 }
