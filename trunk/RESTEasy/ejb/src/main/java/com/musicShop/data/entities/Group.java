@@ -3,6 +3,7 @@ package com.musicShop.data.entities;
 import java.util.ArrayList;
 import com.musicShop.data.entities.Musition;
 import com.musicShop.data.entities.Song;
+import com.musicShop.data.entities.Album;
 
 public class Group {
 	private String name;
@@ -11,6 +12,7 @@ public class Group {
 	private String musition;
 	public ArrayList<Musition> musitians = new ArrayList<Musition>();
 	public ArrayList<Song> songs = new ArrayList<Song>();
+	public ArrayList<Album> albums = new ArrayList<Album>();
 
 	public void setName(String aName) {
 		this.name = aName;

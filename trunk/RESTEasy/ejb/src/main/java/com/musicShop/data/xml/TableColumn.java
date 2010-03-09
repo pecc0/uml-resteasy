@@ -8,15 +8,16 @@ public class TableColumn {
 	public String sTitle = "";
 	@javax.xml.bind.annotation.XmlElement
 	public String sClass = "";
-	AlbumListing unnamed_AlbumListing_;
 
 	public static ArrayList columnsFromClass(java.lang.Class aClazz) {
 				ArrayList<TableColumn> result = new ArrayList<TableColumn>();
 				for (java.lang.reflect.Field f : aClazz.getDeclaredFields()) {
-					TableColumn tc = new TableColumn();
-					tc.sTitle = f.getName();
+					if (!f.getType().isAssignableFrom(java.util.ArrayList.class)) {
+						TableColumn tc = new TableColumn();
+						tc.sTitle = f.getName();
 		
-					result.add(tc);
+						result.add(tc);
+					}
 				}
 				return result;
 	}
