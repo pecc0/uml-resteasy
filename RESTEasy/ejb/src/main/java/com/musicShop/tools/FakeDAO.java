@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.musicShop.data.entities.Album;
 import com.musicShop.data.entities.Employee;
+import com.musicShop.data.entities.Group;
 import com.musicShop.data.entities.Supplier;
 
 public class FakeDAO {
@@ -37,12 +38,21 @@ public class FakeDAO {
 	public static Album[] getAllAlbums() {
 		ArrayList<Album> result = new ArrayList<Album>();
 		Album e = new Album();
-		e.setStyle("hard rock");
-		//e.setOwnerName("owner");
+		e.setStyle("heavy metal");
+		e.setName("Master of Puppets");
+		Group g = new Group();
+		g.setName("Metallica");
+		e.groups.add(g);
+		e.setYear(1984);
 		result.add(e);
+		
 		e = new Album();
-		//e.setFirmName("sup 2");
-		//e.setOwnerName("2's owner");
+		e.setStyle("heavy metal");
+		e.setName("...And Justice for All");
+		g = new Group();
+		g.setName("Metallica");
+		e.groups.add(g);
+		e.setYear(1988);
 		result.add(e);
 		return result.toArray(new Album[]{});
 	}

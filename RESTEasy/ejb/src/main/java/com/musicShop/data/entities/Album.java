@@ -2,15 +2,17 @@ package com.musicShop.data.entities;
 
 import java.util.ArrayList;
 import com.musicShop.data.entities.Song;
+import com.musicShop.data.entities.Group;
 
 @javax.xml.bind.annotation.XmlRootElement
 public class Album {
+	@javax.ws.rs.FormParam(value = "name")
+	private String name = "";
 	@javax.ws.rs.FormParam(value = "style")
 	private String style = "";
 	private int year;
-	@javax.ws.rs.FormParam(value = "name")
-	private String name = "";
 	public ArrayList<Song> songs = new ArrayList<Song>();
+	public ArrayList<Group> groups = new ArrayList<Group>();
 
 	@javax.ws.rs.FormParam(value = "year")
 	public void setYear(String aValue) {
@@ -24,6 +26,14 @@ public class Album {
 
 	public String toString() {
 		return "Album (" + name + ", " + style + ", " + year + ")";
+	}
+
+	public void setName(String aName) {
+		this.name = aName;
+	}
+
+	public String getName() {
+		return this.name;
 	}
 
 	public void setStyle(String aStyle) {
@@ -40,13 +50,5 @@ public class Album {
 
 	public int getYear() {
 		return this.year;
-	}
-
-	public void setName(String aName) {
-		this.name = aName;
-	}
-
-	public String getName() {
-		return this.name;
 	}
 }
